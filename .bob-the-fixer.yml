@@ -1,0 +1,10 @@
+review_focus:
+  - security
+  - performance
+ignore_paths:
+  - "*.lock"
+  - "vendor/**"
+custom_instructions: |
+  Flag any file path built from unsanitized user input (path traversal risk).
+  Flag any hardcoded credential, webhook URL, or API key.
+severity_threshold: info
