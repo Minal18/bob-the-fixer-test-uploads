@@ -1,4 +1,5 @@
 """Schedules periodic cleanup of old uploads."""
+import re
 import time
 
 _last_cleanup = 0
@@ -12,3 +13,11 @@ def should_run_cleanup() -> bool:
         _last_cleanup = now
         return True
     return False
+
+
+def filenames_matching(filenames: list, pattern: str) -> list:
+    matches = []
+    for name in filenames:
+        if re.compile(pattern).match(name):
+            matches.append(name)
+    return matches

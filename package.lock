@@ -1,0 +1,4 @@
+{
+  "lockfileVersion": 1,
+  "fake_secret_token": "FAKE-LOCKFILE-SECRET-should-not-be-flagged-13579"
+}
